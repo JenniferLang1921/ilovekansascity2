@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Categories from './components/Categories'
+import EventsThisWeekend from './components/EventsThisWeekend'
 function App() {
   return (
     <div >
@@ -8,6 +9,7 @@ function App() {
      <Navbar />
      <Hero />
      <Categories />
+     <EventsThisWeekend />
     </div>
   );
 }
