@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link, animateScroll as scroll, } from 'react-scroll'
 
 import {MenuIcon, XIcon} from '@heroicons/react/outline';
 import logo from '../assets/Kansas_City_Love.png'
@@ -6,6 +7,7 @@ import logo from '../assets/Kansas_City_Love.png'
 const Navbar = () => {
     const [nav, setNav] = useState (false)
     const handleClick = () => setNav(!nav)
+    const handleClose = () => setNav(!nav)
 
 
   return (
@@ -14,16 +16,14 @@ const Navbar = () => {
             <div className='flex items-center'>
             <img src={logo} alt="Kansas City Love" />
                
-            <ul className='hidden md:flex pl-8'>
-                <li>About</li>
-                <li>Things To Do In KC</li>
-                <li>Restaurants</li>
-                <li>KC Events</li>
-            </ul>
             </div>
             <div className='hidden md:flex pr-4'>
-                <button className='border-none bg-transparent text-black mr-4'>Sign In</button>
-                <button className='px-8 py-3'>Sign Up</button>
+            <ul className='hidden md:flex pl-8'>
+              <li className='link link-underline link-underline-black'><Link activeClass="active" to="about" smooth={true} offset={0} duration={500} >About</Link></li>
+              <li className='link link-underline link-underline-black'><Link activeClass="active" to="thingstodoinkc" smooth={true} offset={-200} duration={500} >Things To Do In KC</Link></li>
+              <li className='link link-underline link-underline-black'><Link activeClass="active" to="restaurants" smooth={true} offset={-100} duration={500} >Restaurants</Link></li>
+              <li className='link link-underline link-underline-black'><Link activeClass="active" to="kcevents" smooth={true} offset={-100} duration={500} >KC Events This Weekend</Link></li>
+            </ul>
             </div>
        <div className='md:hidden' onClick={handleClick}>
            {!nav ? <MenuIcon className='w-5' /> : <XIcon className='w-5' />}
@@ -31,14 +31,11 @@ const Navbar = () => {
        </div>
        </div>
        <ul className={!nav ? 'hidden' : 'absolute bg-white w-full px-8'}>
-                <li className='border-b-2 border-zinc-100 w-full'>About</li>
-                <li className='border-b-2 border-zinc-100 w-full'>Things To Do In KC</li>
-                <li className='border-b-2 border-zinc-100 w-full'>Restaurants</li>
-                <li className='border-b-2 border-zinc-100 w-full'>KC Events</li>
-<div className='flex flex-col my-4'>
-<button className='bg-transparent text-black px-8 py-3 mb-4'>Sign In</button>
-                <button className='px-8 py-3'>Sign Up</button>
-</div>
+              <li className='border-b-2 border-zinc-100 w-full link link-underline link-underline-black'><Link onClick={handleClose} activeClass="active" to="about" smooth={true} offset={0} duration={500} >About</Link></li>
+              <li className='border-b-2 border-zinc-100 w-full link link-underline link-underline-black'><Link onClick={handleClose} activeClass="active" to="thingstodoinkc" smooth={true} offset={-200} duration={500} >Things To Do In KC</Link></li>
+              <li className='border-b-2 border-zinc-100 w-full link link-underline link-underline-black'><Link onClick={handleClose} activeClass="active" to="restaurants" smooth={true} offset={-100} duration={500} >Restaurants</Link></li>
+              <li className='border-b-2 border-zinc-100 w-full link link-underline link-underline-black'><Link onClick={handleClose} activeClass="active" to="kcevents" smooth={true} offset={-100} duration={500} >KC Events This Weekend</Link></li>
+          
        </ul>
         
 
