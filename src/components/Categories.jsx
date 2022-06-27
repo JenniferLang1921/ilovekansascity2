@@ -2,7 +2,7 @@ import React from 'react'
 
 const Categories = () => {
   return (
-    <div name='thingstodoinkc' className='max-w-[1240px] mx-auto'>
+    <div className='max-w-[1240px] mx-auto'>
         <div className='grid md:grid-cols-3 gap-2 px-2 text-center'>
             <div className='border py-8 mt-2 rounded-xl shadow-xl'>
                 <p className='text-2xl text-red-900'>Hiking</p>

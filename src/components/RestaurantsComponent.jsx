@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Restaurants = () => {
+const RestaurantsComponent = () => {
   return (
    
         <div name='restaurants' className='w-full  bg-white flex flex-col justify-between mt-4'>
@@ -21,4 +21,4 @@ const Restaurants = () => {
   )
 }
 
-export default Restaurants
+export default RestaurantsComponent
