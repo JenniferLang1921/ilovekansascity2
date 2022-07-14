@@ -1,9 +1,9 @@
 import React from 'react'
 
+
 import {
     FaFacebook,
     FaInstagram,
-    FaTwitter,
 } from 'react-icons/fa'
 
 const Footer = () => {
@@ -35,10 +35,9 @@ const Footer = () => {
         </div>
         <div className='flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500'>
             <p> 2022 I Love KC. All rights reserved</p>
-        <div className='flex justify-between sm:w-[200px] pt-4 text-2xl'>
-            <FaFacebook />
-            <FaInstagram />
-            <FaTwitter />
+        <div className='flex justify-between sm:w-[75px] pt-4 text-2xl'>
+        <a href="https://www.facebook.com/lovingkansascity"><FaFacebook /></a>
+        <a href="https://www.instagram.com/livelovekansascity/"><FaInstagram /></a>
         </div>
         </div>
     </div>

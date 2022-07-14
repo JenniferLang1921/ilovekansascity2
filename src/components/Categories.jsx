@@ -2,8 +2,8 @@ import React from 'react'
 
 const Categories = () => {
   return (
-    <div className='max-w-[1240px] mx-auto'>
-        <div className='grid md:grid-cols-3 gap-2 px-2 text-center'>
+    <div className='max-w-[1000px] mx-auto'>
+        <div className='grid md:grid-cols-3 gap-20 px-2 py-10 text-center'>
             <div className='border py-8 mt-2 rounded-xl shadow-xl'>
                 <p className='text-2xl text-red-900'>Hiking</p>
             </div>
@@ -15,7 +15,7 @@ const Categories = () => {
             </div>
 
         </div>
-        <div className='grid md:grid-cols-3 gap-2 px-2 text-center'>
+        <div className='grid md:grid-cols-3 gap-20 px-2 text-center'>
             <div className='border py-8 mt-4 rounded-xl shadow-xl'>
                 <p className='text-2xl text-red-900'>Romantic Nights</p>
             </div >
